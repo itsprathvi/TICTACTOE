@@ -1,2 +1,2 @@
-# TICTACTOE
-Tictactoe Mind Game Developed Using Minimax Algorithm and Java
+# TICTACTO
+Tictactoe Mind Game Developed Using Minimax AI Algorithm in Java
