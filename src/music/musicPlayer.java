@@ -8,6 +8,7 @@ import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.Clip;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
+import javax.swing.JOptionPane;
 
 public class musicPlayer {
     private File file;
@@ -15,14 +16,13 @@ public class musicPlayer {
     Clip clip;
 
     public musicPlayer() {
-        file = new File("/home/prathviraj/Documents/procode/JAVA_TICTACTOE/src/music/music.wav");
+        file = new File("./music/music.wav");
         try {
             as = AudioSystem.getAudioInputStream(file);
             clip = AudioSystem.getClip();
             clip.open(as);
-        } catch (UnsupportedAudioFileException | IOException e) {
-            e.printStackTrace();
-        } catch (LineUnavailableException e) {
+        } catch (UnsupportedAudioFileException | IOException | LineUnavailableException e) {
+            JOptionPane.showMessageDialog(null,"Could not play music", "Music error", JOptionPane.ERROR_MESSAGE);
             e.printStackTrace();
         }
     }

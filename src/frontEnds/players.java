@@ -34,11 +34,7 @@ public class players extends frontEndUtil {
         mainFrame.setSize(500, 500);
         mainFrame.setLayout(new GridLayout(3, 1));
         mainFrame.getContentPane().setBackground(BACKGROUND_COLOR);
-        mainFrame.addWindowListener(new WindowAdapter() {
-            public void windowClosing(WindowEvent windowEvent) {
-                System.exit(0);
-            }
-        });
+        mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         headerLabel = new JLabel("", JLabel.CENTER);
         statusLabel = new JLabel("", JLabel.CENTER);
         statusLabel.setSize(350, 100);
