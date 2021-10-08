@@ -16,23 +16,23 @@ import algos.tictactoeAlgo;
 import utils.wonUtil;
 
 public class tictactoe extends frontEndUtil implements ActionListener {
-    Boolean SINGELPLAYER = false;
-    Boolean HARD = false;
-    Character PLAYER = 'X';
-    Character BOT = 'O';
-    int noOfComparision = 0;
+    private Boolean SINGLEPLAYER = false;
+    private Boolean HARD = false;
+    private Character PLAYER = 'X';
+    private Character BOT = 'O';
+    private int noOfComparision = 0;
     private ArrayList<Character> origBoard = new ArrayList<Character>();
 
-    boolean XTurn = true;
+    private boolean XTurn = true;
 
-    JFrame frame = new JFrame();
-    JPanel HEADDER = new JPanel();
-    JLabel TITLE = new JLabel("TicTacToe");
-    JPanel BODY = new JPanel();
-    JPanel BOARD = new JPanel();
-    JButton rerun = new JButton("Rerun");
-    ArrayList<JButton> buttons = new ArrayList<JButton>();
-    JPanel FOOTER = new JPanel();
+    private JFrame frame = new JFrame();
+    private JPanel HEADER = new JPanel();
+    private JLabel TITLE = new JLabel("TicTacToe");
+    private JPanel BODY = new JPanel();
+    private JPanel BOARD = new JPanel();
+    private JButton rerun = new JButton("Rerun");
+    private ArrayList<JButton> buttons = new ArrayList<JButton>();
+    private JPanel FOOTER = new JPanel();
 
     public void init() {
         XTurn = true;
@@ -45,7 +45,7 @@ public class tictactoe extends frontEndUtil implements ActionListener {
     }
 
     tictactoe(Boolean SINGLEPLAYER, Boolean HARD) {
-        this.SINGELPLAYER = SINGLEPLAYER;
+        this.SINGLEPLAYER = SINGLEPLAYER;
         this.HARD = HARD;
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(null);
@@ -53,16 +53,16 @@ public class tictactoe extends frontEndUtil implements ActionListener {
         frame.setVisible(true);
         frame.getContentPane().setBackground(BACKGROUND_COLOR);
 
-        HEADDER.setBackground(BACKGROUND_COLOR);
-        HEADDER.setBounds(0, 0, SIZE, 2 * (SIZE - BOARD_SIZE) / 4);
+        HEADER.setBackground(BACKGROUND_COLOR);
+        HEADER.setBounds(0, 0, SIZE, 2 * (SIZE - BOARD_SIZE) / 4);
 
         TITLE.setAlignmentX(JLabel.CENTER_ALIGNMENT);
         TITLE.setAlignmentY(JLabel.BOTTOM_ALIGNMENT);
         TITLE.setForeground(TEXT_COLOR);
 
         TITLE.setFont(fontHelsky);
-        HEADDER.add("JLabel", TITLE);
-        frame.add(HEADDER);
+        HEADER.add("JLabel", TITLE);
+        frame.add(HEADER);
 
         BODY.setBackground(BACKGROUND_COLOR);
         BODY.setBounds(0, 2 * (SIZE - BOARD_SIZE) / 4, SIZE, BOARD_SIZE);
@@ -125,7 +125,7 @@ public class tictactoe extends frontEndUtil implements ActionListener {
         rerun.setFont(fontNewsPaper3);
         rerun.setFocusable(false);
         rerun.addActionListener(this);
-        HEADDER.add(rerun);
+        HEADER.add(rerun);
     }
 
     public Boolean check(Character who) {
@@ -168,7 +168,7 @@ public class tictactoe extends frontEndUtil implements ActionListener {
                         origBoard.set(i, PLAYER);
                         XTurn = false;
 
-                        if (!check(PLAYER) && SINGELPLAYER) {
+                        if (!check(PLAYER) && SINGLEPLAYER) {
                             playBot();
                         }
                     }
