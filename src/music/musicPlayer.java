@@ -15,7 +15,7 @@ public class musicPlayer {
     Clip clip;
 
     public musicPlayer() {
-        file = new File("/home/prathviraj/Documents/procode/JAVA_TICTACTOE/src/music/music.wav");
+        file = new File("/home/prathviraj/Documents/procode/TICTACTOE/src/music/music.wav");
         try {
             as = AudioSystem.getAudioInputStream(file);
             clip = AudioSystem.getClip();

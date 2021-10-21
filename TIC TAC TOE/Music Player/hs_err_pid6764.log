@@ -1,0 +1,64 @@
+#
+# A fatal error has been detected by the Java Runtime Environment:
+#
+#  SIGSEGV (0xb) at pc=0x00007f35f92bb0ad, pid=6764, tid=56826
+#
+# JRE version: OpenJDK Runtime Environment (11.0.11+9) (build 11.0.11+9-Ubuntu-0ubuntu2.20.04)
+# Java VM: OpenJDK 64-Bit Server VM (11.0.11+9-Ubuntu-0ubuntu2.20.04, mixed mode, sharing, tiered, compressed oops, g1 gc, linux-amd64)
+# Problematic frame:
+# C  [libjimage.so+0x30ad]
+#
+# Core dump will be written. Default location: Core dumps may be processed with "/usr/share/apport/apport %p %s %c %d %P %E" (or dumping to /home/prathviraj/Documents/procode/TIC TAC TOE/Music Player/core.6764)
+#
+# If you would like to submit a bug report, please visit:
+#   https://bugs.launchpad.net/ubuntu/+source/openjdk-lts
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -Dfile.encoding=UTF-8 App
+
+Host: Intel(R) Core(TM) i3-6006U CPU @ 2.00GHz, 4 cores, 7G, Ubuntu 20.04.2 LTS
+Time: Tue Jun 29 19:44:34 2021 IST elapsed time: 22155.808403 seconds (0d 6h 9m 15s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x00007f3574001000):  JavaThread "XToolkt-Shutdown-Thread" [_thread_in_vm, id=56826, stack(0x00007f35f3eff000,0x00007f35f4000000)]
+
+Stack: [0x00007f35f3eff000,0x00007f35f4000000],  sp=0x00007f35f3ffd060,  free space=1016k
+Native frames: (J=compiled Java code, A=aot compiled Java code, j=interpreted, Vv=VM code, C=native code)
+C  [libjimage.so+0x30ad]
+C  [libjimage.so+0x3da2]
+C  [libjimage.so+0x4291]  JIMAGE_FindResource+0xf1
+V  [libjvm.so+0x5b0731]
+V  [libjvm.so+0x5b2ee1]
+V  [libjvm.so+0xdea23d]
+V  [libjvm.so+0xde8dca]
+V  [libjvm.so+0xdeb38b]
+V  [libjvm.so+0x6629fa]
+V  [libjvm.so+0xa4693a]
+V  [libjvm.so+0xa4d5db]
+V  [libjvm.so+0x853373]
+V  [libjvm.so+0x8539e1]
+j  sun.awt.X11.XToolkit.lambda$init$0()V+0 java.desktop@11.0.11
+j  sun.awt.X11.XToolkit$$Lambda$9.run()V+4 java.desktop@11.0.11
+j  java.lang.Thread.run()V+11 java.base@11.0.11
+v  ~StubRoutines::call_stub
+V  [libjvm.so+0x859b69]
+V  [libjvm.so+0x8581be]
+V  [libjvm.so+0x903dd1]
+V  [libjvm.so+0xe2105f]
+V  [libjvm.so+0xe1d690]
+V  [libjvm.so+0xbdac76]
+
+Java frames: (J=compiled Java code, j=interpreted, Vv=VM code)
+j  sun.awt.X11.XToolkit.lambda$init$0()V+0 java.desktop@11.0.11
+j  sun.awt.X11.XToolkit$$Lambda$9.run()V+4 java.desktop@11.0.11
+j  java.lang.Thread.run()V+11 java.base@11.0.11
+v  ~StubRoutines::call_stub
+
+siginfo: si_signo: 11 (SIGSEGV), si_code: 1 (SEGV_MAPERR), si_addr: 0x00007f35eb894c6c
+
+Register to memory mapping:
+
+RAX=
