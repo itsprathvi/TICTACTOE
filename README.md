@@ -21,4 +21,3 @@ A player can play a perfect game of tic-tac-toe (to win or at least draw) if, ea
 <b>Empty corner:</b> The player plays in a corner square.<br>
 <b>Empty side:</b> The player plays in a middle square on any of the four sides.<br>
 
-<p align="center"><img src="https://img.poki.com/cdn-cgi/image/quality=78,width=600,height=600,fit=cover,g=0.5x0.5,f=auto/d07c1db617a36898b5e8c71013d228d11003eb36d7150b7abfe988fe097c7d66.png" alt="TICTACTOE"/></p>
