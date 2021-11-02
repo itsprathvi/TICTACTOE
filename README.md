@@ -5,7 +5,7 @@ Tic-tac-toe (American English), noughts and crosses (Commonwealth English), or X
 <p align="center"><img src="https://user-images.githubusercontent.com/91747813/138558429-edca5044-c679-4ddd-8637-c496ef46fc2b.png" alt="TICTACTOE"/></p>
 
 
-<h2 align="center">GAMEPLAY</h2>
+<h4 align="left">GAMEPLAY</h4>
 Tic-tac-toe is played on a three-by-three grid by two players, who alternately place the marks X and O in one of the nine spaces in the grid.<br>
 There is no universally-agreed rule as to who plays first, but the convention that X plays first is used.<br>
 Because of the simplicity of tic-tac-toe, it is often used as a pedagogical tool for teaching the concepts of good sportsmanship and the branch of artificial intelligence that deals with the searching of game trees.<br>
